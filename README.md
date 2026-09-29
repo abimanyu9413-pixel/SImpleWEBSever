@@ -1,6 +1,6 @@
 # SImpleWEBSever
 # EX01 Developing a Simple Webserver
-## Date:
+## Date:29.09.2026
 
 ## AIM:
 To develop a simple webserver to serve html pages and display the Device Specifications of your Laptop.
@@ -89,7 +89,8 @@ httpd.serve_forever()
 
 ## OUTPUT:
 
-![alt text](<c:/Users/acer/Pictures/Screenshots/Screenshot 2026-09-29 182817.png>)
+<img width="1116" height="717" alt="Screenshot 2026-09-29 182817" src="https://github.com/user-attachments/assets/48fb8bdc-8b53-469e-b8fa-30dbc6733c5f" />
+
 
 ![alt text](<Screenshot 2026-09-29 183255.png>)
 ## RESULT:

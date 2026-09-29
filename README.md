@@ -37,10 +37,60 @@ Start the server script and check for errors.
 Open a browser and navigate to http://127.0.0.1:8000 (or the assigned port).
 
 ## PROGRAM:
+```py
+from http.server import HTTPServer, BaseHTTPRequestHandler
+
+content = """
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Web Server</title>
+</head>
+
+<body>
+    <h1>Simple Web Server</h1>
+
+    <h2>Student Details</h2>
+
+    <p><b>Register Number:</b> 26018966 </p>
+    <p><b>Name:</b> ABIMANYU R </p>
+
+    <h2>TCP/IP Protocol Suite</h2>
+
+    <ul>
+        <li>HTTP</li>
+        <li>HTTPS</li>
+        <li>FTP</li>
+        <li>TCP</li>
+        <li>IP</li>
+        <li>DNS</li>
+    </ul>
+
+</body>
+</html>
+"""
+
+class myhandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        print("request received")
+        self.send_response(200)
+        self.send_header("content-type", "text/html; charset=utf-8")
+        self.end_headers()
+        self.wfile.write(content.encode())
+
+server_address = ("", 8000)
+httpd = HTTPServer(server_address, myhandler)
+print("my webserver is running...")
+httpd.serve_forever()
+
+```
 
 
 ## OUTPUT:
 
+![alt text](<c:/Users/acer/Pictures/Screenshots/Screenshot 2026-09-29 182817.png>)
 
+![alt text](<Screenshot 2026-09-29 183255.png>)
 ## RESULT:
 The program for implementing simple webserver is executed successfully.
